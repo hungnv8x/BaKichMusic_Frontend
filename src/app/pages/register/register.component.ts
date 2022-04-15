@@ -8,7 +8,6 @@ import {FormGroup} from "@angular/forms";
 })
 export class RegisterComponent implements OnInit {
 
-  formRegister: FormGroup;
   constructor() { }
 
   ngOnInit() {
