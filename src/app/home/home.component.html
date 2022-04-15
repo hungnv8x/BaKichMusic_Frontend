@@ -3,8 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Title</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
-        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
 
 </head>
 <body>
@@ -43,18 +42,18 @@
         </li>
 
       </ul>
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <form *ngIf="formSearch" [formGroup]="formSearch" class="form-inline my-2 my-lg-0">
+        <input type="search" placeholder="Search" aria-label="Search" formControlName="search">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        <ul class="navbar-nav mr-auto  ">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Đăng nhập <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <button class="btn btn-info" href="#">Đăng ký</button>
-          </li>
-        </ul>
       </form>
+      <ul class="navbar-nav mr-auto  ">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Đăng nhập <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <button class="btn btn-info" href="#">Đăng ký</button>
+        </li>
+      </ul>
 
 
     </div>
@@ -573,3 +572,5 @@
         crossorigin="anonymous"></script>
 </body>
 </html>
+
+
